@@ -31,7 +31,7 @@ declare module 'react-scroll' {
   export function Element(props: { name: string; className?: string; id?: string; style?: React.CSSProperties; children: React.ReactNode }): JSX.Element;
   export function Events(callback: (event: string) => void): { register: (eventName: string) => void };
   export function scrollSpy: {
-    update: () => void;
+    update(): void;
   };
   export function scroller: {
     scrollTo(name: string, props: ScrollProps): void;
@@ -44,6 +44,6 @@ declare module 'react-scroll' {
   };
 
   export const Helpers: {
-    Scroll: () => void;
+    Scroll(): void;
   };
 }
