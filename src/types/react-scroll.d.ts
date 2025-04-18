@@ -29,13 +29,22 @@ declare module 'react-scroll' {
 
   export function Link(props: ScrollLinkProps): JSX.Element;
   export function Element(props: { name: string; className?: string; id?: string; style?: React.CSSProperties; children: React.ReactNode }): JSX.Element;
-  export function Events(callback: (event: string) => void): { register: (eventName: string) => void };
+  
+  export const Events: {
+    scrollEvent: {
+      register: (eventName: string, callback: () => void) => void;
+      remove: (eventName: string) => void;
+    };
+  };
+  
   export const scrollSpy: {
     update(): void;
   };
+  
   export const scroller: {
     scrollTo(name: string, props: ScrollProps): void;
   };
+  
   export const animateScroll: {
     scrollToTop(props?: ScrollProps): void;
     scrollToBottom(props?: ScrollProps): void;
