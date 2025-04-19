@@ -53,6 +53,9 @@ const Navbar = () => {
           <Link to="/mindset" className="text-white hover:neon-text-cyan transition-all">
             Mindset
           </Link>
+          <Link to="/about" className="text-white hover:neon-text-cyan transition-all">
+            About
+          </Link>
           <Link to="/membership" className="btn-primary">
             Join Now
           </Link>
@@ -105,6 +108,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Mindset
+          </Link>
+          <Link
+            to="/about"
+            className="text-white hover:neon-text-cyan py-2 transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
           </Link>
           <Link
             to="/membership"

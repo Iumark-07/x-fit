@@ -12,6 +12,7 @@ const testimonials = [
     afterImg: "public/lovable-uploads/1d37303c-769b-4cc5-a386-0f6bfee78281.png",
     quote: "Project X-Fit transformed not just my body, but my entire mindset. I went from making excuses to making progress.",
     weeks: 12,
+    readTime: "5 min read",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const testimonials = [
     afterImg: "public/lovable-uploads/2d0b9027-687f-44ff-b20e-2d89c6ed9d88.png",
     quote: "The street workouts and nutrition plans helped me shed 15kg and find my confidence again. This is the real deal.",
     weeks: 16,
+    readTime: "7 min read",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const testimonials = [
     afterImg: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png",
     quote: "No fancy gym, no problem. X-Fit showed me how to build muscle with minimal equipment in my own neighborhood.",
     weeks: 8,
+    readTime: "4 min read",
   },
 ];
 
@@ -83,7 +86,10 @@ const MindsetSection = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{testimonial.name}</h3>
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-bold">{testimonial.name}</h3>
+                  <span className="text-gray-400 text-sm">{testimonial.readTime}</span>
+                </div>
                 <p className="text-gray-400 italic mb-4">"{testimonial.quote}"</p>
                 <Link
                   to={`/mindset/transformation/${testimonial.id}`}
