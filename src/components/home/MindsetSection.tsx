@@ -15,16 +15,16 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Priya K.",
-    beforeImg: "public/lovable-uploads/faca7818-a973-4eb1-9e06-0ff85d6ef050.png",
-    afterImg: "public/lovable-uploads/2262d29d-355d-419d-b9f0-b68121e97896.png",
+    name: "Michael K.",
+    beforeImg: "public/lovable-uploads/63c6b3f6-c095-43a9-be1e-a93b4cadb1af.png",
+    afterImg: "public/lovable-uploads/2d0b9027-687f-44ff-b20e-2d89c6ed9d88.png",
     quote: "The street workouts and nutrition plans helped me shed 15kg and find my confidence again. This is the real deal.",
     weeks: 16,
   },
   {
     id: 3,
     name: "Rahul M.",
-    beforeImg: "public/lovable-uploads/e9bc0e57-c4e9-44ee-b000-dacfba81c4c5.png",
+    beforeImg: "public/lovable-uploads/7b0e4d47-5039-4437-a5c8-e51336877051.png",
     afterImg: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png",
     quote: "No fancy gym, no problem. X-Fit showed me how to build muscle with minimal equipment in my own neighborhood.",
     weeks: 8,
@@ -86,7 +86,7 @@ const MindsetSection = () => {
                 <h3 className="text-xl font-bold mb-2">{testimonial.name}</h3>
                 <p className="text-gray-400 italic mb-4">"{testimonial.quote}"</p>
                 <Link
-                  to="/mindset"
+                  to={`/mindset/transformation/${testimonial.id}`}
                   className="inline-flex items-center text-xfit-cyan hover:underline"
                 >
                   <span>Read full story</span>

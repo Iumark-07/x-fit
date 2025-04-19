@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Mindset from "./pages/Mindset";
 import Nutrition from "./pages/Nutrition";
+import TransformationStory from "./pages/TransformationStory";
+import MealPlanDetails from "./pages/MealPlanDetails";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/mindset" element={<Mindset />} />
           <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/mindset/transformation/:id" element={<TransformationStory />} />
+          <Route path="/nutrition/meal-plan/:id" element={<MealPlanDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
