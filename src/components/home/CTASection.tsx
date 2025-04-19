@@ -22,7 +22,7 @@ const CTASection = () => {
     },
     {
       name: "Monthly Grind",
-      price: "₹999",
+      price: "₹12.9",
       duration: "per month",
       features: [
         "Full workout library",
@@ -37,7 +37,7 @@ const CTASection = () => {
     },
     {
       name: "Elite Warrior",
-      price: "₹2,499",
+      price: "₹99.9",
       duration: "per month",
       features: [
         "Everything in Monthly",

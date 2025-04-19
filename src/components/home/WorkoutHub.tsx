@@ -44,32 +44,32 @@ const WorkoutHub = () => {
   const muscleGroups = [
     {
       title: "Chest",
-      imageSrc: "public/lovable-uploads/53da4c27-1994-44eb-af21-00dfb84fc378.png",
+      imageSrc: "public/lovable-uploads/b30ee79f-4239-4a52-9f3f-abc7e9cc38ab.png",
       linkTo: "/workouts/chest",
     },
     {
       title: "Shoulders",
-      imageSrc: "public/lovable-uploads/3e53c2be-ae73-4fff-8fca-34066e4e3687.png",
+      imageSrc: "public/lovable-uploads/bc5becae-44ad-493e-a43b-b48d440a416c.png",
       linkTo: "/workouts/shoulders",
     },
     {
       title: "Legs",
-      imageSrc: "public/lovable-uploads/dd10affd-1c02-46df-ba9f-dd605bdc972e.png",
+      imageSrc: "public/lovable-uploads/051b0f7d-1a28-4d31-bad9-202fb7aecf2a.png",
       linkTo: "/workouts/legs",
     },
     {
       title: "Back",
-      imageSrc: "public/lovable-uploads/691a6da0-368e-40ad-8c51-3efee5b7a1b5.png",
+      imageSrc: "public/lovable-uploads/f1577887-c7b3-486f-84f8-409879f17cc9.png",
       linkTo: "/workouts/back",
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png",
+      imageSrc: "public/lovable-uploads/e9bc0e57-c4e9-44ee-b000-dacfba81c4c5.png",
       linkTo: "/workouts/arms",
     },
     {
       title: "Core",
-      imageSrc: "public/lovable-uploads/63c6b3f6-c095-43a9-be1e-a93b4cadb1af.png",
+      imageSrc: "public/lovable-uploads/d5426006-f9f9-4459-b4f9-0675b0d39fed.png",
       linkTo: "/workouts/core",
     },
   ];
