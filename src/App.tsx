@@ -11,6 +11,9 @@ import Nutrition from "./pages/Nutrition";
 import TransformationStory from "./pages/TransformationStory";
 import MealPlanDetails from "./pages/MealPlanDetails";
 import About from "./pages/About";
+import Workouts from "./pages/Workouts";
+import WorkoutsByGroup from "./pages/WorkoutsByGroup";
+import WorkoutDetail from "./pages/WorkoutDetail";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/mindset" element={<Mindset />} />
           <Route path="/nutrition" element={<Nutrition />} />
           <Route path="/about" element={<About />} />
+          <Route path="/workouts" element={<Workouts />} />
+          <Route path="/workouts/:group" element={<WorkoutsByGroup />} />
+          <Route path="/workouts/:group/:id" element={<WorkoutDetail />} />
           <Route path="/mindset/transformation/:id" element={<TransformationStory />} />
           <Route path="/nutrition/meal-plan/:id" element={<MealPlanDetails />} />
           <Route path="/mindset/article/:id" element={<TransformationStory />} />

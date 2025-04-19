@@ -8,8 +8,8 @@ const testimonials = [
   {
     id: 1,
     name: "Arjun S.",
-    beforeImg: "public/lovable-uploads/dd172949-c8bc-46cd-8506-a6df5163b139.png",
-    afterImg: "public/lovable-uploads/1d37303c-769b-4cc5-a386-0f6bfee78281.png",
+    beforeImg: "public/lovable-uploads/f8b28f2b-d35a-4ba1-9a89-038a79e867f3.png",
+    afterImg: "public/lovable-uploads/5cb132b8-9018-432d-bf8e-e540403a7ab9.png",
     quote: "Project X-Fit transformed not just my body, but my entire mindset. I went from making excuses to making progress.",
     weeks: 12,
     readTime: "5 min read",
@@ -17,8 +17,8 @@ const testimonials = [
   {
     id: 2,
     name: "Michael K.",
-    beforeImg: "public/lovable-uploads/63c6b3f6-c095-43a9-be1e-a93b4cadb1af.png",
-    afterImg: "public/lovable-uploads/2d0b9027-687f-44ff-b20e-2d89c6ed9d88.png",
+    beforeImg: "public/lovable-uploads/667d17e4-df86-43d1-ac11-d3d7ce494146.png",
+    afterImg: "public/lovable-uploads/d546d267-9f40-44de-9a22-4d4ceaa64e21.png",
     quote: "The street workouts and nutrition plans helped me shed 15kg and find my confidence again. This is the real deal.",
     weeks: 16,
     readTime: "7 min read",
@@ -26,8 +26,8 @@ const testimonials = [
   {
     id: 3,
     name: "Rahul M.",
-    beforeImg: "public/lovable-uploads/7b0e4d47-5039-4437-a5c8-e51336877051.png",
-    afterImg: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png",
+    beforeImg: "public/lovable-uploads/9e941299-d9cb-42ff-a0df-78abe72ae074.png",
+    afterImg: "public/lovable-uploads/0a928ef5-2152-421b-bab9-d106282db84d.png",
     quote: "No fancy gym, no problem. X-Fit showed me how to build muscle with minimal equipment in my own neighborhood.",
     weeks: 8,
     readTime: "4 min read",

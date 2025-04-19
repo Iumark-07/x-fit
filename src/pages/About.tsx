@@ -2,7 +2,7 @@
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -52,6 +52,10 @@ const About = () => {
                   alt="Umar Khitab" 
                   className="rounded-lg w-full h-auto shadow-neon-cyan" 
                 />
+                <div className="mt-4 text-center">
+                  <p className="text-xfit-cyan font-medium text-lg">Iumark-07</p>
+                  <p className="text-gray-400">Founder of Project X-Fit</p>
+                </div>
               </motion.div>
               
               <motion.div
@@ -84,6 +88,21 @@ const About = () => {
                   equipment and maximum determination. This isn't just another fitness program—it's a movement for those 
                   who refuse to let circumstances dictate their potential.
                 </p>
+
+                <div className="pt-4">
+                  <h3 className="text-xl font-bold mb-4">Connect with Iumark-07</h3>
+                  <div className="flex space-x-4">
+                    <a href="https://instagram.com/iumark07" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                      <Instagram size={24} />
+                    </a>
+                    <a href="https://youtube.com/iumark07" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                      <Youtube size={24} />
+                    </a>
+                    <a href="mailto:contact@project-xfit.com" className="text-gray-400 hover:text-white">
+                      <Mail size={24} />
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -148,6 +167,50 @@ const About = () => {
           </div>
         </section>
 
+        {/* The Origin of Iumark-07 Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="order-2 md:order-1"
+                >
+                  <h2 className="text-3xl font-bold mb-6">
+                    The Origin of <span className="neon-text-red">Iumark-07</span>
+                  </h2>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    The name "Iumark-07" has a special significance in my journey. The "I" represents the individual power we all possess, "umark" is a play on my name, and "07" marks the year I began my transformation from a skinny teenager to a dedicated athlete.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    This persona emerged as I developed my unique training philosophy, combining street workouts with scientific principles. It's a reminder that even without resources, we can build something extraordinary through determination and knowledge.
+                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    Today, Iumark-07 isn't just my brand—it's a symbol of the transformative potential that exists in every person willing to put in the work, regardless of their starting point or circumstances.
+                  </p>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="order-1 md:order-2"
+                >
+                  <img 
+                    src="public/lovable-uploads/7b8c21ca-372d-4d1d-b330-68f0b63c64ab.png" 
+                    alt="Iumark-07 origin" 
+                    className="rounded-lg shadow-lg" 
+                  />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -157,8 +220,8 @@ const About = () => {
                 Join thousands who have already changed their bodies and lives with the X-Fit system.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/membership" className="btn-primary">
-                  Join X-Fit Today
+                <Link to="/train-now" className="btn-primary">
+                  Get My Custom Plan
                 </Link>
                 <Link to="/workouts" className="btn-secondary">
                   Explore Workouts

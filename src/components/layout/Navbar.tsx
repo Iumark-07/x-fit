@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link to="/about" className="text-white hover:neon-text-cyan transition-all">
             About
           </Link>
-          <Link to="/membership" className="btn-primary">
+          <Link to="/train-now" className="btn-primary">
             Join Now
           </Link>
         </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            to="/membership"
+            to="/train-now"
             className="btn-primary inline-block text-center"
             onClick={() => setIsMenuOpen(false)}
           >

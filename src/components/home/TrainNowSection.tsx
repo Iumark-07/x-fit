@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type BodyType = "slim" | "bulky" | "short" | "average" | null;
 type AgeRange = "<18" | "18-25" | "26-35" | "36+" | null;
@@ -179,10 +180,10 @@ const TrainNowSection = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/workouts" className="btn-primary inline-flex items-center justify-center">
+                <Link to="/workouts" className="btn-primary inline-flex items-center justify-center">
                   <span>View Full Plan</span>
                   <ArrowRight size={16} className="ml-2" />
-                </a>
+                </Link>
                 <button 
                   onClick={resetForm} 
                   className="btn-secondary inline-flex items-center justify-center">
