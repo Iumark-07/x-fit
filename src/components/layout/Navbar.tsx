@@ -56,6 +56,9 @@ const Navbar = () => {
           <Link to="/about" className="text-white hover:neon-text-cyan transition-all">
             About
           </Link>
+          <Link to="/community" className="text-white hover:neon-text-cyan transition-all">
+            Community
+          </Link>
           <Link to="/train-now" className="btn-primary">
             Join Now
           </Link>
@@ -115,6 +118,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             About
+          </Link>
+          <Link
+            to="/community"
+            className="text-white hover:neon-text-cyan py-2 transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Community
           </Link>
           <Link
             to="/train-now"
