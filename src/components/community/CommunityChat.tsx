@@ -1,24 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-
-// Ensure we have non-empty values for the Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-// Verify that we have the required values before creating the client
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('Supabase URL and Anon Key are required. Check your environment variables.');
-}
-
-const supabase = createClient(
-  supabaseUrl || '',
-  supabaseAnonKey || ''
-);
 
 interface Message {
   id: number;
