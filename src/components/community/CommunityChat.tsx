@@ -11,6 +11,7 @@ interface Message {
   user_id: string;
   content: string;
   created_at: string;
+  user_email: string;
   user_name?: string;
 }
 
@@ -55,25 +56,30 @@ const CommunityChat = () => {
       return;
     }
 
-    // Fetch names for messages
     if (data && data.length > 0) {
-      // Get unique user_ids
+      // Get unique user IDs from messages
       const userIds = [...new Set(data.map(m => m.user_id))];
-      const { data: profilesMap } = await supabase
+      
+      // Fetch user profiles for these IDs
+      const { data: profilesData } = await supabase
         .from('profiles')
         .select('id, name')
         .in('id', userIds);
 
-      // Map id to name
+      // Create a map of user IDs to names
       const idToName: Record<string, string> = {};
-      profilesMap?.forEach((prof: any) => {
-        idToName[prof.id] = prof.name;
-      });
+      if (profilesData) {
+        profilesData.forEach((prof: any) => {
+          idToName[prof.id] = prof.name;
+        });
+      }
 
+      // Add names to messages and reverse to show newest at bottom
       const msgsWithNames = data.reverse().map(msg => ({
         ...msg,
-        user_name: idToName[msg.user_id] || msg.user_id
+        user_name: idToName[msg.user_id] || 'Anonymous'
       }));
+      
       setMessages(msgsWithNames);
     } else {
       setMessages([]);
@@ -82,16 +88,15 @@ const CommunityChat = () => {
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newMessage.trim() || !user?.id) return;
+    if (!newMessage.trim() || !user?.id || !user.email) return;
 
     const { error } = await supabase
       .from('messages')
-      .insert([
-        {
-          content: newMessage,
-          user_id: user.id,
-        }
-      ]);
+      .insert({
+        content: newMessage,
+        user_id: user.id,
+        user_email: user.email
+      });
 
     if (error) {
       toast({

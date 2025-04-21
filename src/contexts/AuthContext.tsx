@@ -26,9 +26,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Fetch profile for logged in user
   const fetchProfile = async (userId: string) => {
-    const { data, error } = await supabase.from('profiles').select('*').eq('id', userId).maybeSingle();
-    if (!error && data) setProfile(data);
-    else setProfile(null);
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .maybeSingle();
+    
+    if (!error && data) {
+      setProfile(data as Profile);
+    } else {
+      setProfile(null);
+      console.error('Error fetching profile:', error);
+    }
   };
 
   useEffect(() => {
@@ -60,13 +69,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const signUp = async (email: string, password: string, name: string) => {
     const { error, data } = await supabase.auth.signUp({ email, password });
     if (error) throw error;
-    // Supabase on signup will call CREATE TRIGGER to add profile
-    // But in case, fallback: insert profile manually
+    
     if (data.user) {
       const { error: profileErr } = await supabase
         .from('profiles')
-        .upsert({ id: data.user.id, name: name });
-      if (profileErr) console.error(profileErr);
+        .insert({ 
+          id: data.user.id, 
+          name: name 
+        });
+        
+      if (profileErr) {
+        console.error('Error creating profile:', profileErr);
+        throw profileErr;
+      }
+      
       await fetchProfile(data.user.id);
     }
   };
