@@ -40,7 +40,7 @@ const FounderStory = () => {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=1374&auto=format&fit=crop')",
+              "url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2380&auto=format&fit=crop')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "brightness(0.2)",
@@ -60,7 +60,7 @@ const FounderStory = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden neon-border-cyan">
               <img
-                src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1287&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2380&auto=format&fit=crop"
                 alt="Umar Khitab training"
                 className="w-full h-auto"
               />

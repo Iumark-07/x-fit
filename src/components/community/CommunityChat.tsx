@@ -33,10 +33,23 @@ const CommunityChat = () => {
         table: 'messages' 
       }, payload => {
         const newMsg = payload.new as Message;
-        // Add user name to the new message
+        
+        // Add user name to the new message if it's the current user
         if (profile && newMsg.user_id === user?.id) {
           newMsg.user_name = profile.name;
+        } else {
+          // For other users, fetch their profile to get the name
+          fetchUserName(newMsg.user_id).then(name => {
+            if (name) {
+              setMessages(prev => 
+                prev.map(msg => 
+                  msg.id === newMsg.id ? { ...msg, user_name: name } : msg
+                )
+              );
+            }
+          });
         }
+        
         setMessages(prev => [...prev, newMsg]);
         
         // Scroll to bottom on new message
@@ -57,6 +70,26 @@ const CommunityChat = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const fetchUserName = async (userId: string): Promise<string | null> => {
+    try {
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('name')
+        .eq('id', userId)
+        .single();
+
+      if (error || !data) {
+        console.error("Error fetching user name:", error);
+        return null;
+      }
+
+      return data.name;
+    } catch (err) {
+      console.error("Exception fetching user name:", err);
+      return null;
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -154,7 +187,7 @@ const CommunityChat = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop')", 
+          backgroundImage: "url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2380&auto=format&fit=crop')", 
           filter: "blur(8px) brightness(0.3)",
           transform: "scale(1.1)" 
         }}

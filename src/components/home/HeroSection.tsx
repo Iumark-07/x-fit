@@ -9,7 +9,7 @@ const HeroSection = () => {
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('https://images.unsplash.com/photo-1534368786749-d60a0e9a39af?q=80&w=1770&auto=format&fit=crop')",
+          "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2380&auto=format&fit=crop')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -36,14 +36,6 @@ const HeroSection = () => {
             className="btn-primary w-full sm:w-auto"
           >
             Train Now
-          </Link>
-          <Link
-            to="workout-hub"
-            smooth={true}
-            duration={800}
-            className="btn-secondary w-full sm:w-auto"
-          >
-            Explore Workouts
           </Link>
         </div>
       </div>
