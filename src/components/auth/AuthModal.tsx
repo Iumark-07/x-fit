@@ -16,9 +16,15 @@ const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
-  const { signIn, signUp } = useAuth();
+  const { signIn, signUp, user } = useAuth();
   const { toast } = useToast();
+
+  // If user is logged in, close modal auto
+  React.useEffect(() => {
+    if (user) onClose();
+  }, [user, onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +34,7 @@ const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
       if (isLogin) {
         await signIn(email, password);
       } else {
-        await signUp(email, password);
+        await signUp(email, password, name);
       }
       toast({
         title: isLogin ? "Welcome back!" : "Account created successfully!",
@@ -56,10 +62,24 @@ const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
           </DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
+          {!isLogin && (
+            <div className="space-y-2">
+              <Input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required={!isLogin}
+                minLength={2}
+                maxLength={50}
+              />
+            </div>
+          )}
           <div className="space-y-2">
             <Input
               type="email"
               placeholder="Email"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -69,9 +89,11 @@ const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
             <Input
               type="password"
               placeholder="Password"
+              autoComplete={isLogin ? "current-password" : "new-password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              minLength={6}
             />
           </div>
           <Button type="submit" className="w-full" disabled={loading}>
@@ -82,6 +104,7 @@ const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
           <button
             onClick={() => setIsLogin(!isLogin)}
             className="text-sm text-gray-500 hover:text-gray-700"
+            type="button"
           >
             {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
           </button>

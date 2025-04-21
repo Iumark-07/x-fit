@@ -15,6 +15,10 @@ import Workouts from "./pages/Workouts";
 import WorkoutsByGroup from "./pages/WorkoutsByGroup";
 import WorkoutDetail from "./pages/WorkoutDetail";
 import Community from "./pages/Community";
+import FAQ from "./pages/FAQ";
+import Challenges from "./pages/Challenges";
+import Tools from "./pages/Tools";
+import Trackers from "./pages/Trackers";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +41,10 @@ const App = () => (
             <Route path="/nutrition/meal-plan/:id" element={<MealPlanDetails />} />
             <Route path="/mindset/article/:id" element={<TransformationStory />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/challenges" element={<Challenges />} />
+            <Route path="/tools" element={<Tools />} />
+            <Route path="/trackers" element={<Trackers />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
