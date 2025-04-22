@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -63,9 +62,9 @@ const Navbar = () => {
             <Link to="/community" className="text-white hover:neon-text-cyan transition-all">
               Community
             </Link>
-            <a href="#" className="btn-primary" onClick={handleJoinNow}>
-              Join Now
-            </a>
+            <Link to="/subscription-plans" className="text-white hover:neon-text-cyan transition-all">
+              Plans
+            </Link>
           </div>
           {/* Mobile Menu Button */}
           <button className="md:hidden text-white focus:outline-none" onClick={toggleMenu}>
@@ -97,9 +96,9 @@ const Navbar = () => {
             <Link to="/community" className="text-white hover:neon-text-cyan py-2 transition-all" onClick={() => setIsMenuOpen(false)}>
               Community
             </Link>
-            <a href="#" className="btn-primary inline-block text-center" onClick={handleJoinNow}>
-              Join Now
-            </a>
+            <Link to="/subscription-plans" className="text-white hover:neon-text-cyan py-2 transition-all" onClick={() => setIsMenuOpen(false)}>
+              Plans
+            </Link>
           </div>
         </div>
       </nav>

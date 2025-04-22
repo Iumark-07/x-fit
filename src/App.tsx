@@ -19,6 +19,7 @@ import FAQ from "./pages/FAQ";
 import Challenges from "./pages/Challenges";
 import Tools from "./pages/Tools";
 import Trackers from "./pages/Trackers";
+import SubscriptionPlans from "./pages/SubscriptionPlans";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/nutrition/meal-plan/:id" element={<MealPlanDetails />} />
             <Route path="/mindset/article/:id" element={<TransformationStory />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/subscription-plans" element={<SubscriptionPlans />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/tools" element={<Tools />} />

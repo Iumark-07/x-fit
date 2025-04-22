@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import CommunityChat from '@/components/community/CommunityChat';
 import { useAuth } from '@/contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Community = () => {
   const { user } = useAuth();
@@ -15,8 +16,11 @@ const Community = () => {
           <CommunityChat />
         ) : (
           <div className="text-center py-12">
-            <h2 className="text-2xl font-semibold mb-4">Please sign in to join the community chat</h2>
-            <p className="text-gray-600">You need to be logged in to participate in discussions.</p>
+            <h2 className="text-2xl font-semibold mb-4">Join the X-Fit Community</h2>
+            <p className="text-gray-600 mb-8">Connect with fellow fitness enthusiasts and start your transformation journey today.</p>
+            <Link to="/subscription-plans" className="btn-primary inline-flex items-center">
+              Join Now
+            </Link>
           </div>
         )}
       </div>

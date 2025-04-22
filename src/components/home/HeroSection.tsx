@@ -30,12 +30,18 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-slide-in-bottom" style={{ animationDelay: "0.9s" }}>
           <Link
-            to="train-now"
-            smooth={true}
-            duration={800}
+            to="/subscription-plans"
             className="btn-primary w-full sm:w-auto"
           >
-            Train Now
+            Join X-Fit Today
+          </Link>
+          <Link
+            to="founder-story"
+            smooth={true}
+            duration={800}
+            className="text-white hover:text-xfit-cyan transition-colors"
+          >
+            Learn More
           </Link>
         </div>
       </div>
