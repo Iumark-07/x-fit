@@ -9,7 +9,7 @@ const HeroSection = () => {
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2380&auto=format&fit=crop')",
+          "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/42e9ad17-5c6a-41da-a855-b934dfa6e653.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

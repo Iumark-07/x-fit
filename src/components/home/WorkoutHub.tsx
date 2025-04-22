@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -44,32 +43,32 @@ const WorkoutHub = () => {
   const muscleGroups = [
     {
       title: "Chest",
-      imageSrc: "public/lovable-uploads/f8b28f2b-d35a-4ba1-9a89-038a79e867f3.png",
+      imageSrc: "public/lovable-uploads/28121fa1-9966-4fdc-9887-c9da2f7fb098.png",
       linkTo: "/workouts/chest",
     },
     {
       title: "Shoulders",
-      imageSrc: "public/lovable-uploads/7b8c21ca-372d-4d1d-b330-68f0b63c64ab.png",
+      imageSrc: "public/lovable-uploads/461c7ee2-a064-4922-a675-ccf19df49cbd.png",
       linkTo: "/workouts/shoulders",
     },
     {
       title: "Legs",
-      imageSrc: "public/lovable-uploads/3b55b8f4-4c22-4f61-a979-ef79de7f5cde.png",
+      imageSrc: "public/lovable-uploads/86ce972b-16e3-4ab9-88b6-7616a9c3903e.png",
       linkTo: "/workouts/legs",
     },
     {
       title: "Back",
-      imageSrc: "public/lovable-uploads/b0a2672f-55e8-451e-9f1c-4876cda48875.png",
+      imageSrc: "public/lovable-uploads/5d7227b7-5a63-44f3-b6bf-80dcd16a3af4.png",
       linkTo: "/workouts/back",
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/667d17e4-df86-43d1-ac11-d3d7ce494146.png",
+      imageSrc: "public/lovable-uploads/3283543e-30d9-4bf8-827d-1b3d6695f754.png",
       linkTo: "/workouts/arms",
     },
     {
       title: "Core",
-      imageSrc: "public/lovable-uploads/74377d4e-304a-4564-b905-8a9384891e9c.png",
+      imageSrc: "public/lovable-uploads/4b6929c0-c013-4ba8-a905-f3a4bb0a7377.png",
       linkTo: "/workouts/core",
     },
   ];
