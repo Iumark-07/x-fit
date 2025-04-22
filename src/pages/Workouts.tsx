@@ -1,3 +1,4 @@
+
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -28,7 +29,7 @@ const Workouts = () => {
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/7b0e4d47-5039-4437-a5c8-e51336877051.png",
+      imageSrc: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png", // Updated image for Arms
       linkTo: "/workouts/arms",
     },
     {
