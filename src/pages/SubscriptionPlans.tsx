@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -7,16 +6,16 @@ import { Link } from "react-router-dom";
 
 const plans = [
   {
-    name: "Free Trial",
-    price: "$0",
-    duration: "7 days",
+    name: "15-Day Trial",
+    price: "$9.90",
+    duration: "15 days",
     features: [
       "Access to basic workouts",
       "Limited exercise library",
       "Community chat access",
       "Basic nutrition tips",
     ],
-    cta: "Start Free Trial",
+    cta: "Start Trial",
     link: "/auth?plan=trial",
   },
   {
@@ -71,7 +70,7 @@ const SubscriptionPlans = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto mb-16">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -79,46 +78,52 @@ const SubscriptionPlans = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`rounded-lg overflow-hidden ${
-                  plan.popular
-                    ? "border-2 border-xfit-cyan relative shadow-neon-cyan transform md:-translate-y-4"
+                  plan.name === "Monthly Plan"
+                    ? "border-2 border-xfit-cyan relative shadow-neon-cyan"
                     : "border border-gray-800"
                 }`}
               >
-                {plan.popular && (
-                  <div className="bg-xfit-cyan text-xfit-black text-center py-1 font-bold">
-                    MOST POPULAR
-                  </div>
-                )}
                 <div className="bg-gradient-to-br from-gray-900 to-black p-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.duration}</span>
+                  <div className="flex flex-col h-full">
+                    <div className="flex-grow">
+                      <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                      <div className="mb-4">
+                        <span className="text-4xl font-bold">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">{plan.duration}</span>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature) => (
+                          <li key={feature} className="flex items-start">
+                            <Check size={18} className="mr-2 mt-0.5 text-xfit-cyan" />
+                            <span className="text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mt-auto">
+                      <Link
+                        to={plan.link}
+                        className={`block text-center py-3 px-4 rounded font-bold transition-all duration-300 ${
+                          plan.name === "Monthly Plan"
+                            ? "bg-xfit-cyan text-black hover:shadow-neon-cyan"
+                            : "bg-gray-800 text-white hover:bg-gray-700"
+                        }`}
+                      >
+                        {plan.cta}
+                      </Link>
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start">
-                        <Check size={18} className="mr-2 mt-0.5 text-xfit-cyan" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to={plan.link}
-                    className={`block text-center py-3 px-4 rounded font-bold transition-all duration-300 ${
-                      plan.popular
-                        ? "bg-xfit-cyan text-black hover:shadow-neon-cyan"
-                        : "bg-gray-800 text-white hover:bg-gray-700"
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
                 </div>
               </motion.div>
             ))}
           </div>
 
           <div className="text-center">
+            <div className="max-w-2xl mx-auto p-4 bg-gray-900/50 rounded-lg mb-8">
+              <p className="text-yellow-400 font-medium">
+                Note: The full app experience is currently in progress. Some features may not function fully at this time. Thank you for your patience and support!
+              </p>
+            </div>
             <p className="text-gray-400 mb-4">
               All plans include a 100% satisfaction guarantee. Cancel anytime.
             </p>
