@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -9,32 +8,32 @@ const Workouts = () => {
   const muscleGroups = [
     {
       title: "Chest",
-      imageSrc: "public/lovable-uploads/b30ee79f-4239-4a52-9f3f-abc7e9cc38ab.png",
+      imageSrc: "public/lovable-uploads/9de2c7bf-de4a-41a7-a5d6-8b864755b0ca.png",
       linkTo: "/workouts/chest",
     },
     {
       title: "Shoulders",
-      imageSrc: "public/lovable-uploads/3e53c2be-ae73-4fff-8fca-34066e4e3687.png",
+      imageSrc: "public/lovable-uploads/1d0d487c-154b-4ab2-9864-92d03ddfc6d3.png",
       linkTo: "/workouts/shoulders",
     },
     {
       title: "Legs",
-      imageSrc: "public/lovable-uploads/a05e1e2e-4122-48bc-a9c4-fbe576c3e9ec.png",
+      imageSrc: "public/lovable-uploads/dd172949-c8bc-46cd-8506-a6df5163b139.png",
       linkTo: "/workouts/legs",
     },
     {
       title: "Back",
-      imageSrc: "public/lovable-uploads/691a6da0-368e-40ad-8c51-3efee5b7a1b5.png",
+      imageSrc: "public/lovable-uploads/a022b372-b8cd-44cf-94c7-65cac64a81cd.png",
       linkTo: "/workouts/back",
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png",
+      imageSrc: "public/lovable-uploads/7b0e4d47-5039-4437-a5c8-e51336877051.png",
       linkTo: "/workouts/arms",
     },
     {
       title: "Core",
-      imageSrc: "public/lovable-uploads/53da4c27-1994-44eb-af21-00dfb84fc378.png",
+      imageSrc: "public/lovable-uploads/1144195b-4ee9-4aef-8f77-30e5c0683013.png",
       linkTo: "/workouts/core",
     },
   ];
@@ -48,7 +47,7 @@ const Workouts = () => {
             className="absolute inset-0 z-0"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/837056d0-16bb-4206-8e45-6c6805899645.png')",
+                "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/bc5becae-44ad-493e-a43b-b48d440a416c.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -127,7 +126,14 @@ const Workouts = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-xfit-black rounded-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-r from-blue-900 to-purple-900 flex items-center justify-center">
+                <div 
+                  className="h-48 bg-gradient-to-r from-blue-900 to-purple-900 flex items-center justify-center"
+                  style={{
+                    backgroundImage: "url('public/lovable-uploads/2262d29d-355d-419d-b9f0-b68121e97896.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                  }}
+                >
                   <h3 className="text-2xl font-bold text-white">Beginner Program</h3>
                 </div>
                 <div className="p-6">
@@ -161,7 +167,14 @@ const Workouts = () => {
               </div>
               
               <div className="bg-xfit-black rounded-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-r from-red-900 to-orange-900 flex items-center justify-center">
+                <div 
+                  className="h-48 bg-gradient-to-r from-red-900 to-orange-900 flex items-center justify-center"
+                  style={{
+                    backgroundImage: "url('public/lovable-uploads/dd10affd-1c02-46df-ba9f-dd605bdc972e.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                  }}
+                >
                   <h3 className="text-2xl font-bold text-white">Intermediate Program</h3>
                 </div>
                 <div className="p-6">
@@ -195,7 +208,14 @@ const Workouts = () => {
               </div>
               
               <div className="bg-xfit-black rounded-lg overflow-hidden">
-                <div className="h-48 bg-gradient-to-r from-cyan-900 to-green-900 flex items-center justify-center">
+                <div 
+                  className="h-48 bg-gradient-to-r from-cyan-900 to-green-900 flex items-center justify-center"
+                  style={{
+                    backgroundImage: "url('public/lovable-uploads/1d37303c-769b-4cc5-a386-0f6bfee78281.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                  }}
+                >
                   <h3 className="text-2xl font-bold text-white">Advanced Program</h3>
                 </div>
                 <div className="p-6">
@@ -230,7 +250,7 @@ const Workouts = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Guide Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -259,7 +279,7 @@ const Workouts = () => {
                 </div>
                 <div className="md:w-1/3">
                   <img 
-                    src="public/lovable-uploads/f8b28f2b-d35a-4ba1-9a89-038a79e867f3.png" 
+                    src="public/lovable-uploads/dbac7e9d-a625-400c-a40c-f272657a99a1.png" 
                     alt="Training manual" 
                     className="rounded-lg shadow-lg w-full" 
                   />
