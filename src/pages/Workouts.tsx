@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -29,7 +28,7 @@ const Workouts = () => {
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png", // Updated image for Arms
+      imageSrc: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png",
       linkTo: "/workouts/arms",
     },
     {
@@ -128,14 +127,14 @@ const Workouts = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-xfit-black rounded-lg overflow-hidden">
                 <div 
-                  className="h-48 bg-gradient-to-r from-blue-900 to-purple-900 flex items-center justify-center"
+                  className="h-48 bg-gradient-to-r from-blue-900/80 to-purple-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "url('public/lovable-uploads/2262d29d-355d-419d-b9f0-b68121e97896.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/9de2c7bf-de4a-41a7-a5d6-8b864755b0ca.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
                 >
-                  <h3 className="text-2xl font-bold text-white">Beginner Program</h3>
+                  <h3 className="text-2xl font-bold text-white relative z-10">Beginner Program</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-2 mb-6">
@@ -169,14 +168,14 @@ const Workouts = () => {
               
               <div className="bg-xfit-black rounded-lg overflow-hidden">
                 <div 
-                  className="h-48 bg-gradient-to-r from-red-900 to-orange-900 flex items-center justify-center"
+                  className="h-48 bg-gradient-to-r from-red-900/80 to-orange-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "url('public/lovable-uploads/dd10affd-1c02-46df-ba9f-dd605bdc972e.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
                 >
-                  <h3 className="text-2xl font-bold text-white">Intermediate Program</h3>
+                  <h3 className="text-2xl font-bold text-white relative z-10">Intermediate Program</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-2 mb-6">
@@ -210,14 +209,14 @@ const Workouts = () => {
               
               <div className="bg-xfit-black rounded-lg overflow-hidden">
                 <div 
-                  className="h-48 bg-gradient-to-r from-cyan-900 to-green-900 flex items-center justify-center"
+                  className="h-48 bg-gradient-to-r from-cyan-900/80 to-green-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "url('public/lovable-uploads/1d37303c-769b-4cc5-a386-0f6bfee78281.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/a022b372-b8cd-44cf-94c7-65cac64a81cd.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
                 >
-                  <h3 className="text-2xl font-bold text-white">Advanced Program</h3>
+                  <h3 className="text-2xl font-bold text-white relative z-10">Advanced Program</h3>
                 </div>
                 <div className="p-6">
                   <ul className="space-y-2 mb-6">
