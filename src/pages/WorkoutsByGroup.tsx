@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { useParams, Link } from "react-router-dom";
@@ -97,7 +96,7 @@ const muscleGroups = {
   legs: {
     title: "Leg Workouts",
     description: "Build powerful, athletic legs with these lower body exercises.",
-    image: "public/lovable-uploads/a05e1e2e-4122-48bc-a9c4-fbe576c3e9ec.png",
+    image: "public/lovable-uploads/1737b16e-342f-4076-96a8-436445857880.png",
     exercises: [
       {
         id: "barbell-squats",
