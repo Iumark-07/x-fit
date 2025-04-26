@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-scroll";
 import { ChevronDown } from "lucide-react";
@@ -9,7 +8,7 @@ const HeroSection = () => {
       className="relative h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/42e9ad17-5c6a-41da-a855-b934dfa6e653.png')",
+          "linear-gradient(rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/40e44842-97e6-4a84-bdc3-c62e9629357a.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
