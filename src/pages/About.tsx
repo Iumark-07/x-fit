@@ -207,13 +207,22 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="order-1 md:order-2"
+                  className="order-1 md:order-2 relative"
                 >
-                  <img 
-                    src="public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png" 
-                    alt="Iumark-07 origin showing strength and determination" 
-                    className="rounded-lg shadow-neon-cyan hover:shadow-neon-red transition-all duration-300" 
-                  />
+                  <div className="relative">
+                    <img 
+                      src="public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png" 
+                      alt="Iumark-07 origin showing strength and determination" 
+                      className="rounded-lg shadow-neon-cyan hover:shadow-neon-red transition-all duration-300" 
+                    />
+                    <div 
+                      className="absolute bottom-0 right-0 w-1/4 h-1/4 bg-gradient-to-br from-transparent via-gray-900/70 to-black"
+                      style={{
+                        backdropFilter: 'blur(4px)',
+                        borderBottomRightRadius: '0.5rem'
+                      }}
+                    ></div>
+                  </div>
                 </motion.div>
               </div>
             </div>
