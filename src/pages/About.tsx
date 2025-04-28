@@ -1,4 +1,3 @@
-
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -15,9 +14,10 @@ const About = () => {
             className="absolute inset-0 z-0"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/f8c56184-b34b-4436-973d-4c5ee7f7f916.png')",
+                "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/30cffc31-35cb-477f-ba7c-f0ca860ea80f.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
             }}
           ></div>
           <div className="container mx-auto relative z-10">
@@ -46,13 +46,14 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                className="space-y-4"
               >
                 <img 
-                  src="public/lovable-uploads/f8c56184-b34b-4436-973d-4c5ee7f7f916.png" 
-                  alt="Umar Khitab" 
+                  src="public/lovable-uploads/30cffc31-35cb-477f-ba7c-f0ca860ea80f.png"
+                  alt="Umar Khitab with medals" 
                   className="rounded-lg w-full h-auto shadow-neon-cyan" 
                 />
-                <div className="mt-4 text-center">
+                <div className="text-center">
                   <p className="text-xfit-cyan font-medium text-lg">Iumark-07</p>
                   <p className="text-gray-400">Founder of Project X-Fit</p>
                 </div>
