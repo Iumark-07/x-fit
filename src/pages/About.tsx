@@ -171,8 +171,16 @@ const About = () => {
         {/* The Origin of Iumark-07 Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
-            <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div 
+              className="bg-gradient-to-br from-gray-900 to-black rounded-lg p-8 md:p-12 relative overflow-hidden"
+              style={{
+                backgroundImage: `linear-gradient(rgba(26, 31, 44, 0.92), rgba(34, 31, 38, 0.95)), url('public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -202,9 +210,9 @@ const About = () => {
                   className="order-1 md:order-2"
                 >
                   <img 
-                    src="public/lovable-uploads/7b8c21ca-372d-4d1d-b330-68f0b63c64ab.png" 
-                    alt="Iumark-07 origin" 
-                    className="rounded-lg shadow-lg" 
+                    src="public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png" 
+                    alt="Iumark-07 origin showing strength and determination" 
+                    className="rounded-lg shadow-neon-cyan hover:shadow-neon-red transition-all duration-300" 
                   />
                 </motion.div>
               </div>
