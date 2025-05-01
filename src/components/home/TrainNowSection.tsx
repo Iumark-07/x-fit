@@ -46,6 +46,55 @@ const TrainNowSection = () => {
     setPlanGenerated(false);
   };
 
+  // Generate a specific workout plan based on user selections
+  const getWorkoutPlan = () => {
+    if (!bodyType || !ageRange || !goal || !frequency) return null;
+    
+    let planTitle = "";
+    let exercises = [];
+    
+    // Determine plan title based on selections
+    if (goal === "bulking" && bodyType === "slim") {
+      planTitle = "PROJECT BULK: HARDGAINER PROTOCOL";
+      exercises = [
+        { day: "Day 1", focus: "Chest & Triceps", movements: "Bench Press, Incline DB Press, Dips, Cable Flyes, Close-Grip Bench" },
+        { day: "Day 2", focus: "Rest/Cardio", movements: "Light Jog + Mobility Work" },
+        { day: "Day 3", focus: "Legs & Core", movements: "Barbell Squats, Romanian Deadlifts, Hanging Leg Raise, Leg Press, Calf Raises" },
+        { day: "Day 4", focus: "Back & Biceps", movements: "Pull-ups, Rows, Curls, Lat Pulldowns, Face Pulls" },
+        { day: "Day 5", focus: "Shoulders & Arms", movements: "Military Press, Lateral Raises, Tricep Extensions, Front Raises, Shrugs" }
+      ];
+    } else if (goal === "cutting") {
+      planTitle = "SHRED FACTORY: DEFINITION PROTOCOL";
+      exercises = [
+        { day: "Day 1", focus: "Full Body + HIIT", movements: "Compound Lifts + 15min HIIT Finisher" },
+        { day: "Day 2", focus: "Cardio + Core", movements: "30min Steady State + Ab Circuit" },
+        { day: "Day 3", focus: "Upper Body + Intervals", movements: "Push/Pull Split + Sprint Intervals" },
+        { day: "Day 4", focus: "Rest/Active Recovery", movements: "Walking + Mobility Work" },
+        { day: "Day 5", focus: "Lower Body + HIIT", movements: "Leg Focus + Tabata Protocol" }
+      ];
+    } else if (goal === "athletic-base") {
+      planTitle = "ATHLETE X: PERFORMANCE MATRIX";
+      exercises = [
+        { day: "Day 1", focus: "Power Development", movements: "Olympic Lifts + Plyometrics" },
+        { day: "Day 2", focus: "Conditioning", movements: "Circuit Training + Agility Work" },
+        { day: "Day 3", focus: "Strength Base", movements: "Heavy Compounds + Core Stability" },
+        { day: "Day 4", focus: "Recovery", movements: "Mobility + Light Movement" },
+        { day: "Day 5", focus: "Speed & Agility", movements: "Sprint Work + Reactive Drills" }
+      ];
+    } else {
+      planTitle = "X-FIT CUSTOM PROTOCOL";
+      exercises = [
+        { day: "Day 1", focus: "Push Emphasis", movements: "Upper Body Push + Accessories" },
+        { day: "Day 2", focus: "Active Recovery", movements: "Mobility + Light Cardio" },
+        { day: "Day 3", focus: "Pull Emphasis", movements: "Back Focus + Bicep Work" },
+        { day: "Day 4", focus: "Lower Body", movements: "Leg Development + Core" },
+        { day: "Day 5", focus: "Full Body Integration", movements: "Compound Movements + Finishers" }
+      ];
+    }
+    
+    return { title: planTitle, exercises };
+  };
+
   const getStepContent = () => {
     switch (step) {
       case 1:
@@ -127,11 +176,12 @@ const TrainNowSection = () => {
           </div>
         );
       case 5:
+        const workoutPlan = getWorkoutPlan();
         return (
           <div className="space-y-8">
             <div className="bg-xfit-black/60 p-6 rounded-lg border border-gray-800">
               <h3 className="text-2xl font-bold mb-2 neon-text-cyan">
-                PROJECT BULK: HARDGAINER PROTOCOL
+                {workoutPlan?.title || "PERSONALIZED WORKOUT PLAN"}
               </h3>
               <p className="text-gray-400 mb-4">
                 User: {bodyType} | {ageRange} | {goal?.replace("-", " ")} | {frequency} days/week
@@ -149,31 +199,13 @@ const TrainNowSection = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-3 pr-4 font-medium">Day 1</td>
-                        <td className="py-3 pr-4">Chest & Triceps</td>
-                        <td className="py-3">Bench Press, Incline DB Press, Dips</td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-3 pr-4 font-medium">Day 2</td>
-                        <td className="py-3 pr-4">Rest/Cardio</td>
-                        <td className="py-3">Light Jog + Mobility Work</td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-3 pr-4 font-medium">Day 3</td>
-                        <td className="py-3 pr-4">Legs & Core</td>
-                        <td className="py-3">Barbell Squats, Hanging Leg Raise</td>
-                      </tr>
-                      <tr className="border-b border-gray-800">
-                        <td className="py-3 pr-4 font-medium">Day 4</td>
-                        <td className="py-3 pr-4">Back & Biceps</td>
-                        <td className="py-3">Pull-ups, Rows, Curls</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 pr-4 font-medium">Day 5</td>
-                        <td className="py-3 pr-4">Shoulders & Arms</td>
-                        <td className="py-3">Military Press, Lateral Raises, Tricep Extensions</td>
-                      </tr>
+                      {workoutPlan?.exercises.map((exercise, index) => (
+                        <tr key={index} className={index < workoutPlan.exercises.length - 1 ? "border-b border-gray-800" : ""}>
+                          <td className="py-3 pr-4 font-medium">{exercise.day}</td>
+                          <td className="py-3 pr-4">{exercise.focus}</td>
+                          <td className="py-3">{exercise.movements}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
