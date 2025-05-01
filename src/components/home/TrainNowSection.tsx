@@ -54,43 +54,134 @@ const TrainNowSection = () => {
     let planTitle = "";
     let exercises = [];
     
+    // Get number of days from frequency selection
+    const daysPerWeek = frequency === "2-3" ? 3 : 
+                        frequency === "4-5" ? 5 : 
+                        frequency === "6-7" ? 7 : 3;
+    
     // Determine plan title based on selections
     if (goal === "bulking" && bodyType === "slim") {
       planTitle = "PROJECT BULK: HARDGAINER PROTOCOL";
-      exercises = [
-        { day: "Day 1", focus: "Chest & Triceps", movements: "Bench Press, Incline DB Press, Dips, Cable Flyes, Close-Grip Bench" },
-        { day: "Day 2", focus: "Rest/Cardio", movements: "Light Jog + Mobility Work" },
-        { day: "Day 3", focus: "Legs & Core", movements: "Barbell Squats, Romanian Deadlifts, Hanging Leg Raise, Leg Press, Calf Raises" },
-        { day: "Day 4", focus: "Back & Biceps", movements: "Pull-ups, Rows, Curls, Lat Pulldowns, Face Pulls" },
-        { day: "Day 5", focus: "Shoulders & Arms", movements: "Military Press, Lateral Raises, Tricep Extensions, Front Raises, Shrugs" }
-      ];
     } else if (goal === "cutting") {
       planTitle = "SHRED FACTORY: DEFINITION PROTOCOL";
-      exercises = [
-        { day: "Day 1", focus: "Full Body + HIIT", movements: "Compound Lifts + 15min HIIT Finisher" },
-        { day: "Day 2", focus: "Cardio + Core", movements: "30min Steady State + Ab Circuit" },
-        { day: "Day 3", focus: "Upper Body + Intervals", movements: "Push/Pull Split + Sprint Intervals" },
-        { day: "Day 4", focus: "Rest/Active Recovery", movements: "Walking + Mobility Work" },
-        { day: "Day 5", focus: "Lower Body + HIIT", movements: "Leg Focus + Tabata Protocol" }
-      ];
     } else if (goal === "athletic-base") {
       planTitle = "ATHLETE X: PERFORMANCE MATRIX";
-      exercises = [
-        { day: "Day 1", focus: "Power Development", movements: "Olympic Lifts + Plyometrics" },
-        { day: "Day 2", focus: "Conditioning", movements: "Circuit Training + Agility Work" },
-        { day: "Day 3", focus: "Strength Base", movements: "Heavy Compounds + Core Stability" },
-        { day: "Day 4", focus: "Recovery", movements: "Mobility + Light Movement" },
-        { day: "Day 5", focus: "Speed & Agility", movements: "Sprint Work + Reactive Drills" }
-      ];
     } else {
       planTitle = "X-FIT CUSTOM PROTOCOL";
-      exercises = [
-        { day: "Day 1", focus: "Push Emphasis", movements: "Upper Body Push + Accessories" },
-        { day: "Day 2", focus: "Active Recovery", movements: "Mobility + Light Cardio" },
-        { day: "Day 3", focus: "Pull Emphasis", movements: "Back Focus + Bicep Work" },
-        { day: "Day 4", focus: "Lower Body", movements: "Leg Development + Core" },
-        { day: "Day 5", focus: "Full Body Integration", movements: "Compound Movements + Finishers" }
-      ];
+    }
+    
+    // Generate workout schedule based on frequency
+    if (frequency === "2-3") {
+      if (goal === "bulking") {
+        exercises = [
+          { day: "Day 1", focus: "Upper Body", movements: "Bench Press, Incline DB Press, Rows, Pull-ups, Shoulder Press, Bicep/Tricep Supersets" },
+          { day: "Day 2", focus: "Lower Body & Core", movements: "Squats, Romanian Deadlifts, Lunges, Leg Press, Hanging Leg Raises, Planks" },
+          { day: "Day 3", focus: "Full Body & Weak Points", movements: "Deadlifts, Push Press, Pull-ups, Dips, Core Circuit, Focus on Lagging Muscle Groups" }
+        ];
+      } else if (goal === "cutting") {
+        exercises = [
+          { day: "Day 1", focus: "Full Body + HIIT", movements: "Compound Lifts + 15min HIIT Finisher" },
+          { day: "Day 2", focus: "Cardio + Core", movements: "30min Steady State + Ab Circuit" },
+          { day: "Day 3", focus: "Full Body Circuit", movements: "Metabolic Resistance Training, Supersets, Minimal Rest Periods" }
+        ];
+      } else if (goal === "athletic-base") {
+        exercises = [
+          { day: "Day 1", focus: "Strength & Power", movements: "Heavy Compounds, Olympic Lifts, Med Ball Throws" },
+          { day: "Day 2", focus: "Conditioning & Core", movements: "Circuit Training, Sprint Intervals, Anti-Rotation Core Work" },
+          { day: "Day 3", focus: "Speed & Agility", movements: "Plyometrics, Change of Direction, Reaction Drills" }
+        ];
+      } else {
+        exercises = [
+          { day: "Day 1", focus: "Push Focus", movements: "Chest, Shoulders, Triceps + Core" },
+          { day: "Day 2", focus: "Pull Focus", movements: "Back, Biceps, Traps + Core" },
+          { day: "Day 3", focus: "Legs & Functional", movements: "Quads, Hamstrings, Glutes, Balance Work" }
+        ];
+      }
+    } else if (frequency === "4-5") {
+      if (goal === "bulking") {
+        exercises = [
+          { day: "Day 1", focus: "Chest & Triceps", movements: "Bench Press, Incline DB Press, Dips, Cable Flyes, Close-Grip Bench" },
+          { day: "Day 2", focus: "Back & Biceps", movements: "Pull-ups, Rows, Curls, Lat Pulldowns, Face Pulls" },
+          { day: "Day 3", focus: "Legs & Core", movements: "Squats, Romanian Deadlifts, Hanging Leg Raise, Leg Press, Calf Raises" },
+          { day: "Day 4", focus: "Shoulders & Arms", movements: "Military Press, Lateral Raises, Tricep Extensions, Front Raises, Shrugs" },
+          { day: "Day 5", focus: "Full Body Light", movements: "Light compound movements, Focus on form and mind-muscle connection" }
+        ];
+      } else if (goal === "cutting") {
+        exercises = [
+          { day: "Day 1", focus: "Upper Body + HIIT", movements: "Push/Pull Split + 15min HIIT Finisher" },
+          { day: "Day 2", focus: "Lower Body + Intervals", movements: "Leg Focus + Sprint Intervals" },
+          { day: "Day 3", focus: "Full Body Circuit", movements: "Metabolic Resistance Training, Minimal Rest" },
+          { day: "Day 4", focus: "Cardio + Core", movements: "30min Steady State + Ab Circuit" },
+          { day: "Day 5", focus: "Upper/Lower Supersets", movements: "Opposing Muscle Groups, Drop Sets, Time Under Tension" }
+        ];
+      } else if (goal === "athletic-base") {
+        exercises = [
+          { day: "Day 1", focus: "Power Development", movements: "Olympic Lifts + Plyometrics" },
+          { day: "Day 2", focus: "Conditioning", movements: "Circuit Training + Agility Work" },
+          { day: "Day 3", focus: "Strength Base", movements: "Heavy Compounds + Core Stability" },
+          { day: "Day 4", focus: "Recovery", movements: "Mobility + Light Movement" },
+          { day: "Day 5", focus: "Speed & Agility", movements: "Sprint Work + Reactive Drills" }
+        ];
+      } else {
+        exercises = [
+          { day: "Day 1", focus: "Push Emphasis", movements: "Upper Body Push + Accessories" },
+          { day: "Day 2", focus: "Pull Emphasis", movements: "Back Focus + Bicep Work" },
+          { day: "Day 3", focus: "Lower Body", movements: "Leg Development + Core" },
+          { day: "Day 4", focus: "Active Recovery", movements: "Mobility + Light Cardio" },
+          { day: "Day 5", focus: "Full Body Integration", movements: "Compound Movements + Finishers" }
+        ];
+      }
+    } else if (frequency === "6-7") {
+      if (goal === "bulking") {
+        exercises = [
+          { day: "Day 1", focus: "Chest", movements: "Flat/Incline/Decline Press, Flyes, Push-ups, Cable Crossovers" },
+          { day: "Day 2", focus: "Back", movements: "Pull-ups, Rows, Deadlifts, Lat Pulldowns, Face Pulls" },
+          { day: "Day 3", focus: "Shoulders", movements: "Military Press, Lateral/Front/Rear Raises, Upright Rows, Shrugs" },
+          { day: "Day 4", focus: "Arms", movements: "Bicep Curls, Tricep Extensions, Hammer Curls, Skull Crushers, Close-Grip Bench" },
+          { day: "Day 5", focus: "Legs", movements: "Squats, Lunges, Leg Press, Hamstring Curls, Calf Raises" },
+          { day: "Day 6", focus: "Core & Weak Points", movements: "Ab Circuit, Hanging Leg Raises, Focus on Lagging Muscle Groups" },
+          { day: "Day 7", focus: "Active Recovery", movements: "Light Full Body Movement, Mobility Work, Stretching" }
+        ];
+      } else if (goal === "cutting") {
+        exercises = [
+          { day: "Day 1", focus: "Push + HIIT", movements: "Chest & Shoulders + 15min Sprint Intervals" },
+          { day: "Day 2", focus: "Pull + HIIT", movements: "Back & Biceps + 15min Rowing Intervals" },
+          { day: "Day 3", focus: "Legs + Core", movements: "Lower Body Focus + Intense Ab Circuit" },
+          { day: "Day 4", focus: "Full Body Circuit", movements: "Metabolic Resistance Training, Minimal Rest" },
+          { day: "Day 5", focus: "Upper Body Supersets", movements: "Push/Pull Supersets, Drop Sets, Time Under Tension" },
+          { day: "Day 6", focus: "HIIT + Core", movements: "Tabata Protocol + Weighted Ab Work" },
+          { day: "Day 7", focus: "Active Recovery", movements: "30min LISS Cardio, Mobility, Stretching" }
+        ];
+      } else if (goal === "athletic-base") {
+        exercises = [
+          { day: "Day 1", focus: "Power Upper Body", movements: "Upper Body Olympic Variations, Med Ball Throws" },
+          { day: "Day 2", focus: "Power Lower Body", movements: "Lower Body Olympic Variations, Plyometrics" },
+          { day: "Day 3", focus: "Strength Base", movements: "Heavy Compounds, Low Reps, Long Rest" },
+          { day: "Day 4", focus: "Conditioning", movements: "Circuit Training, EMOM Protocols" },
+          { day: "Day 5", focus: "Speed & Agility", movements: "Sprint Work, Change of Direction, Reaction Drills" },
+          { day: "Day 6", focus: "Sport Specific Work", movements: "Movement Patterns Relevant to Your Sport" },
+          { day: "Day 7", focus: "Recovery", movements: "Mobility, Yoga, Light Movement, Contrast Therapy" }
+        ];
+      } else {
+        exercises = [
+          { day: "Day 1", focus: "Chest & Triceps", movements: "Push Focus, Upper Body Pressing Movements" },
+          { day: "Day 2", focus: "Back & Biceps", movements: "Pull Focus, Upper Body Pulling Movements" },
+          { day: "Day 3", focus: "Legs: Quad Focus", movements: "Front Squats, Lunges, Leg Extensions, Leg Press" },
+          { day: "Day 4", focus: "Shoulders & Abs", movements: "Overhead Pressing, Lateral Raises, Core Circuit" },
+          { day: "Day 5", focus: "Arms & Calves", movements: "Bicep/Tricep Supersets, Calf Raise Variations" },
+          { day: "Day 6", focus: "Legs: Posterior Chain", movements: "Deadlifts, RDLs, Hamstring Curls, Glute Bridges" },
+          { day: "Day 7", focus: "Active Recovery", movements: "Light Full Body Movement, Mobility Work, Stretching" }
+        ];
+      }
+    }
+    
+    // Adjust workout schedule if needed to match exact frequency
+    if (frequency === "2-3" && exercises.length > 3) {
+      exercises = exercises.slice(0, 3);
+    } else if (frequency === "4-5" && exercises.length > 5) {
+      exercises = exercises.slice(0, 5);
+    } else if (frequency === "6-7" && exercises.length > 7) {
+      exercises = exercises.slice(0, 7);
     }
     
     return { title: planTitle, exercises };
