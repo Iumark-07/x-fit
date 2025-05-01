@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type BodyType = "slim" | "bulky" | "short" | "average" | null;
 type AgeRange = "<18" | "18-25" | "26-35" | "36+" | null;
@@ -15,6 +15,7 @@ const TrainNowSection = () => {
   const [goal, setGoal] = useState<Goal>(null);
   const [frequency, setFrequency] = useState<Frequency>(null);
   const [planGenerated, setPlanGenerated] = useState(false);
+  const navigate = useNavigate();
 
   const handleBodyTypeSelect = (type: BodyType) => {
     setBodyType(type);
@@ -93,6 +94,24 @@ const TrainNowSection = () => {
     }
     
     return { title: planTitle, exercises };
+  };
+
+  const handleViewFullPlan = () => {
+    if (!bodyType || !ageRange || !goal || !frequency) return;
+    
+    const planData = {
+      bodyType,
+      ageRange,
+      goal,
+      frequency,
+      plan: getWorkoutPlan()
+    };
+    
+    // Store plan data in localStorage to access it in the workout details page
+    localStorage.setItem('workoutPlan', JSON.stringify(planData));
+    
+    // Navigate to workout details page
+    navigate('/workout-plan-details');
   };
 
   const getStepContent = () => {
@@ -212,10 +231,13 @@ const TrainNowSection = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/workouts" className="btn-primary inline-flex items-center justify-center">
+                <button
+                  onClick={handleViewFullPlan}
+                  className="btn-primary inline-flex items-center justify-center"
+                >
                   <span>View Full Plan</span>
                   <ArrowRight size={16} className="ml-2" />
-                </Link>
+                </button>
                 <button 
                   onClick={resetForm} 
                   className="btn-secondary inline-flex items-center justify-center">

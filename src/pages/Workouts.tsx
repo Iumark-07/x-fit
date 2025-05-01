@@ -1,3 +1,4 @@
+
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import { motion } from "framer-motion";
@@ -8,32 +9,32 @@ const Workouts = () => {
   const muscleGroups = [
     {
       title: "Chest",
-      imageSrc: "public/lovable-uploads/9de2c7bf-de4a-41a7-a5d6-8b864755b0ca.png",
+      imageSrc: "public/lovable-uploads/b30ee79f-4239-4a52-9f3f-abc7e9cc38ab.png",
       linkTo: "/workouts/chest",
     },
     {
       title: "Shoulders",
-      imageSrc: "public/lovable-uploads/1d0d487c-154b-4ab2-9864-92d03ddfc6d3.png",
+      imageSrc: "public/lovable-uploads/3e53c2be-ae73-4fff-8fca-34066e4e3687.png",
       linkTo: "/workouts/shoulders",
     },
     {
       title: "Legs",
-      imageSrc: "public/lovable-uploads/dd172949-c8bc-46cd-8506-a6df5163b139.png",
+      imageSrc: "public/lovable-uploads/1737b16e-342f-4076-96a8-436445857880.png",
       linkTo: "/workouts/legs",
     },
     {
       title: "Back",
-      imageSrc: "public/lovable-uploads/a022b372-b8cd-44cf-94c7-65cac64a81cd.png",
+      imageSrc: "public/lovable-uploads/691a6da0-368e-40ad-8c51-3efee5b7a1b5.png",
       linkTo: "/workouts/back",
     },
     {
       title: "Arms",
-      imageSrc: "public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png",
+      imageSrc: "public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png",
       linkTo: "/workouts/arms",
     },
     {
       title: "Core",
-      imageSrc: "public/lovable-uploads/1144195b-4ee9-4aef-8f77-30e5c0683013.png",
+      imageSrc: "public/lovable-uploads/53da4c27-1994-44eb-af21-00dfb84fc378.png",
       linkTo: "/workouts/core",
     },
   ];
@@ -129,7 +130,7 @@ const Workouts = () => {
                 <div 
                   className="h-48 bg-gradient-to-r from-blue-900/80 to-purple-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/9de2c7bf-de4a-41a7-a5d6-8b864755b0ca.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/b30ee79f-4239-4a52-9f3f-abc7e9cc38ab.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
@@ -170,7 +171,7 @@ const Workouts = () => {
                 <div 
                   className="h-48 bg-gradient-to-r from-red-900/80 to-orange-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/28d2c440-169c-40c5-b26e-763ec3b30a05.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}
@@ -211,7 +212,7 @@ const Workouts = () => {
                 <div 
                   className="h-48 bg-gradient-to-r from-cyan-900/80 to-green-900/80 flex items-center justify-center relative"
                   style={{
-                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/a022b372-b8cd-44cf-94c7-65cac64a81cd.png')",
+                    backgroundImage: "linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.7)), url('public/lovable-uploads/691a6da0-368e-40ad-8c51-3efee5b7a1b5.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
                   }}

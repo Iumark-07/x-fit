@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +15,7 @@ import About from "./pages/About";
 import Workouts from "./pages/Workouts";
 import WorkoutsByGroup from "./pages/WorkoutsByGroup";
 import WorkoutDetail from "./pages/WorkoutDetail";
+import WorkoutPlanDetails from "./pages/WorkoutPlanDetails";
 import Community from "./pages/Community";
 import FAQ from "./pages/FAQ";
 import Challenges from "./pages/Challenges";
@@ -47,6 +49,7 @@ const App = () => (
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/trackers" element={<Trackers />} />
+            <Route path="/workout-plan-details" element={<WorkoutPlanDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
