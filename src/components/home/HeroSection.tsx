@@ -1,6 +1,7 @@
 
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -35,21 +36,21 @@ const HeroSection = () => {
           >
             Join X-Fit Today
           </Link>
-          <Link
-            to="founder-story"
+          <ScrollLink
+            to="train-now"
             smooth={true}
             duration={800}
-            className="text-white hover:text-xfit-cyan transition-colors"
+            className="text-white hover:text-xfit-cyan transition-colors cursor-pointer"
           >
             Learn More
-          </Link>
+          </ScrollLink>
         </div>
       </div>
 
       <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-10">
-        <Link to="founder-story" smooth={true} duration={800} className="cursor-pointer">
+        <ScrollLink to="founder-story" smooth={true} duration={800} className="cursor-pointer">
           <ChevronDown size={32} className="text-white" />
-        </Link>
+        </ScrollLink>
       </div>
     </section>
   );

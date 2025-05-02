@@ -12,7 +12,9 @@ const Index = () => {
       <HeroSection />
       <FounderSection />
       <WorkoutHub />
-      <TrainNowSection />
+      <div id="train-now">
+        <TrainNowSection />
+      </div>
     </Layout>
   );
 };

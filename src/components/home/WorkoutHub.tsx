@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -43,7 +44,7 @@ const WorkoutHub = () => {
   const muscleGroups = [
     {
       title: "Chest",
-      imageSrc: "public/lovable-uploads/28121fa1-9966-4fdc-9887-c9da2f7fb098.png",
+      imageSrc: "public/lovable-uploads/4baabc15-2858-4f18-8373-79d84613fa8f.png",
       linkTo: "/workouts/chest",
     },
     {
@@ -53,12 +54,12 @@ const WorkoutHub = () => {
     },
     {
       title: "Legs",
-      imageSrc: "public/lovable-uploads/86ce972b-16e3-4ab9-88b6-7616a9c3903e.png",
+      imageSrc: "public/lovable-uploads/2262d29d-355d-419d-b9f0-b68121e97896.png",
       linkTo: "/workouts/legs",
     },
     {
       title: "Back",
-      imageSrc: "public/lovable-uploads/5d7227b7-5a63-44f3-b6bf-80dcd16a3af4.png",
+      imageSrc: "public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png",
       linkTo: "/workouts/back",
     },
     {

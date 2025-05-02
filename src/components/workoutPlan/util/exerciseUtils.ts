@@ -37,7 +37,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Press the bar back up to full extension without locking elbows",
           "Focus on contracting your chest throughout the movement"
         ],
-        image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/4baabc15-2858-4f18-8373-79d84613fa8f.png",
         muscleGroup: "chest"
       },
       {
@@ -50,7 +50,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Press back up while squeezing your upper chest",
           "Maintain a slight arch in your lower back throughout"
         ],
-        image: "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/d99bfd30-576d-46b5-9936-0c03177fdafb.png",
         muscleGroup: "chest"
       },
       {
@@ -63,7 +63,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Push back up to the starting position",
           "Focus on using chest muscles, not triceps, to drive the movement"
         ],
-        image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/dd172949-c8bc-46cd-8506-a6df5163b139.png",
         muscleGroup: "chest"
       }
     ],
@@ -78,7 +78,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Lower with control to a full hang position",
           "Maintain a slight arch in your back throughout"
         ],
-        image: "https://images.unsplash.com/photo-1598971639058-c613e7836bf7?q=80&w=1376&auto=format&fit=crop",
+        image: "public/lovable-uploads/7ad0ea82-3174-49a3-9a23-d9bbd9c5927a.png",
         muscleGroup: "back"
       },
       {
@@ -91,7 +91,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Squeeze shoulder blades together at the top",
           "Lower with control and repeat, maintaining torso position"
         ],
-        image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?q=80&w=1471&auto=format&fit=crop",
+        image: "public/lovable-uploads/d546d267-9f40-44de-9a22-4d4ceaa64e21.png",
         muscleGroup: "back"
       }
     ],
@@ -106,7 +106,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Lower the bar with control to starting position",
           "Drive through heels and keep shoulders down away from ears"
         ],
-        image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop",
+        image: "public/lovable-uploads/461c7ee2-a064-4922-a675-ccf19df49cbd.png",
         muscleGroup: "shoulders"
       },
       {
@@ -119,7 +119,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Lower with control, don't let arms swing",
           "Focus on using side delts, not traps, to raise the weight"
         ],
-        image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/3e53c2be-ae73-4fff-8fca-34066e4e3687.png",
         muscleGroup: "shoulders"
       }
     ],
@@ -134,7 +134,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Lower until thighs are at least parallel to ground",
           "Drive through heels and midfoot to stand back up, keeping chest up"
         ],
-        image: "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?q=80&w=1469&auto=format&fit=crop",
+        image: "public/lovable-uploads/2262d29d-355d-419d-b9f0-b68121e97896.png",
         muscleGroup: "legs"
       },
       {
@@ -147,7 +147,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Keep back flat and shoulders retracted throughout",
           "Drive hips forward to stand up, squeezing glutes at the top"
         ],
-        image: "https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/1737b16e-342f-4076-96a8-436445857880.png",
         muscleGroup: "legs"
       }
     ],
@@ -162,7 +162,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Hold briefly at top position with maximum flexion",
           "Lower with control, fully extending arms at bottom"
         ],
-        image: "https://images.unsplash.com/photo-1584466977773-e625c37cdd50?q=80&w=1472&auto=format&fit=crop",
+        image: "public/lovable-uploads/3283543e-30d9-4bf8-827d-1b3d6695f754.png",
         muscleGroup: "arms"
       },
       {
@@ -175,7 +175,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Extend arms back to starting position, focusing on triceps",
           "Keep elbows pointed toward ceiling throughout"
         ],
-        image: "https://images.unsplash.com/photo-1530021356476-0a6375ffe73b?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png",
         muscleGroup: "arms"
       },
       {
@@ -188,7 +188,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Raise until forearms are vertical, biceps fully contracted",
           "Lower with control back to starting position"
         ],
-        image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?q=80&w=1470&auto=format&fit=crop",
+        image: "public/lovable-uploads/dd10affd-1c02-46df-ba9f-dd605bdc972e.png",
         muscleGroup: "arms"
       }
     ],
@@ -203,7 +203,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Focus on using abs to lift, not momentum or hip flexors",
           "Lower legs with control, avoiding swinging"
         ],
-        image: "https://images.unsplash.com/photo-1577221084712-45b0445d2b00?q=80&w=1398&auto=format&fit=crop",
+        image: "public/lovable-uploads/4b6929c0-c013-4ba8-a905-f3a4bb0a7377.png",
         muscleGroup: "core"
       },
       {
@@ -216,7 +216,7 @@ export const getExerciseDemos = (muscleGroup: string): ExerciseDemo[] => {
           "Keep shoulders down and back, neck neutral",
           "Hold position while breathing normally"
         ],
-        image: "https://images.unsplash.com/photo-1566241142747-497f8a333NoMatch8f?q=80&w=1476&auto=format&fit=crop",
+        image: "public/lovable-uploads/53da4c27-1994-44eb-af21-00dfb84fc378.png",
         muscleGroup: "core"
       }
     ]
