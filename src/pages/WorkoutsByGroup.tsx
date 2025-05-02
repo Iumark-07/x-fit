@@ -9,126 +9,126 @@ const muscleGroups = {
   chest: {
     title: "Chest Workouts",
     description: "Build a powerful, well-defined chest with these science-backed exercises.",
-    image: "public/lovable-uploads/b30ee79f-4239-4a52-9f3f-abc7e9cc38ab.png",
+    image: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "bench-press",
         name: "Bench Press",
         description: "The king of chest exercises, targeting the entire pectoral region.",
-        image: "public/lovable-uploads/f8b28f2b-d35a-4ba1-9a89-038a79e867f3.png"
+        image: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "incline-dumbbell-press",
         name: "Incline Dumbbell Press",
         description: "Targets the upper chest for that shelf-like appearance.",
-        image: "public/lovable-uploads/5cb132b8-9018-432d-bf8e-e540403a7ab9.png"
+        image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "chest-dips",
         name: "Chest Dips",
         description: "Hits the lower chest fibers with intense tension.",
-        image: "public/lovable-uploads/9e941299-d9cb-42ff-a0df-78abe72ae074.png"
+        image: "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   },
   shoulders: {
     title: "Shoulder Workouts",
     description: "Sculpt 3D delts with these targeted movements for all three shoulder heads.",
-    image: "public/lovable-uploads/3e53c2be-ae73-4fff-8fca-34066e4e3687.png",
+    image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "overhead-press",
         name: "Overhead Press",
         description: "The fundamental shoulder builder for overall mass.",
-        image: "public/lovable-uploads/7b8c21ca-372d-4d1d-b330-68f0b63c64ab.png"
+        image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "lateral-raises",
         name: "Lateral Raises",
         description: "Creates width and that coveted capped shoulder look.",
-        image: "public/lovable-uploads/2f838e48-9abe-41be-b896-2968f3c0610e.png"
+        image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   },
   back: {
     title: "Back Workouts",
     description: "Develop a wide, thick back with these pulling movements.",
-    image: "public/lovable-uploads/691a6da0-368e-40ad-8c51-3efee5b7a1b5.png",
+    image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "pull-ups",
         name: "Pull-ups",
         description: "The ultimate upper back developer for width.",
-        image: "public/lovable-uploads/b0a2672f-55e8-451e-9f1c-4876cda48875.png"
+        image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "barbell-rows",
         name: "Barbell Rows",
         description: "Builds thickness in the mid-back.",
-        image: "public/lovable-uploads/d99bfd30-576d-46b5-9936-0c03177fdafb.png"
+        image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   },
   arms: {
     title: "Arm Workouts",
     description: "Build sleeve-busting arms with these bicep and tricep exercises.",
-    image: "public/lovable-uploads/de2cb329-a13c-463f-958d-da85a6e55864.png",
+    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "barbell-curl",
         name: "Barbell Curl",
         description: "The foundational bicep exercise for overall development.",
-        image: "public/lovable-uploads/667d17e4-df86-43d1-ac11-d3d7ce494146.png"
+        image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "skull-crushers",
         name: "Skull Crushers",
         description: "Primary triceps builder that isolates all three heads.",
-        image: "public/lovable-uploads/d546d267-9f40-44de-9a22-4d4ceaa64e21.png"
+        image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "hammer-curls",
         name: "Hammer Curls",
         description: "Targets the brachialis and brachioradialis for arm thickness.",
-        image: "public/lovable-uploads/0a928ef5-2152-421b-bab9-d106282db84d.png"
+        image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   },
   legs: {
     title: "Leg Workouts",
     description: "Build powerful, athletic legs with these lower body exercises.",
-    image: "public/lovable-uploads/1737b16e-342f-4076-96a8-436445857880.png",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "barbell-squats",
         name: "Barbell Squats",
         description: "The king of all exercises for lower body mass.",
-        image: "public/lovable-uploads/3b55b8f4-4c22-4f61-a979-ef79de7f5cde.png"
+        image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "romanian-deadlift",
         name: "Romanian Deadlift",
         description: "Targets the posterior chain, especially hamstrings and glutes.",
-        image: "public/lovable-uploads/837056d0-16bb-4206-8e45-6c6805899645.png"
+        image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   },
   core: {
     title: "Core Workouts",
     description: "Develop a strong, defined midsection with these targeted core exercises.",
-    image: "public/lovable-uploads/53da4c27-1994-44eb-af21-00dfb84fc378.png",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1000",
     exercises: [
       {
         id: "hanging-leg-raises",
         name: "Hanging Leg Raises",
         description: "Advanced core exercise that targets the lower abs.",
-        image: "public/lovable-uploads/74377d4e-304a-4564-b905-8a9384891e9c.png"
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1000"
       },
       {
         id: "plank",
         name: "Plank",
         description: "Isometric exercise that engages the entire core.",
-        image: "public/lovable-uploads/8b6f8c82-fea6-4310-b225-4054f6353f00.png"
+        image: "https://images.unsplash.com/photo-1566241142559-40a9552f4706?auto=format&fit=crop&q=80&w=1000"
       }
     ]
   }

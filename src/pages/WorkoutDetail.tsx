@@ -20,7 +20,7 @@ const workouts = {
         "Press upward until arms are fully extended, without locking elbows"
       ],
       variations: ["Incline", "Decline", "Close-grip", "Dumbbell"],
-      image: "public/lovable-uploads/f8b28f2b-d35a-4ba1-9a89-038a79e867f3.png"
+      image: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "incline-dumbbell-press",
@@ -35,7 +35,7 @@ const workouts = {
         "Lower the weights slowly to the starting position"
       ],
       variations: ["Neutral grip", "Alternating arms", "Single arm"],
-      image: "public/lovable-uploads/5cb132b8-9018-432d-bf8e-e540403a7ab9.png"
+      image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "chest-dips",
@@ -50,7 +50,7 @@ const workouts = {
         "Push back up to the starting position without locking elbows"
       ],
       variations: ["Weighted", "Assisted", "Ring dips"],
-      image: "public/lovable-uploads/9e941299-d9cb-42ff-a0df-78abe72ae074.png"
+      image: "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?auto=format&fit=crop&q=80&w=1000"
     }
   ],
   arms: [
@@ -67,7 +67,7 @@ const workouts = {
         "Lower the weight in a controlled manner without swinging"
       ],
       variations: ["EZ-bar", "Wide grip", "Close grip", "21s method"],
-      image: "public/lovable-uploads/667d17e4-df86-43d1-ac11-d3d7ce494146.png"
+      image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "skull-crushers",
@@ -82,7 +82,7 @@ const workouts = {
         "Keep wrists firm and movement controlled throughout"
       ],
       variations: ["Dumbbell", "EZ-bar", "Single arm", "Decline bench"],
-      image: "public/lovable-uploads/d546d267-9f40-44de-9a22-4d4ceaa64e21.png"
+      image: "https://images.unsplash.com/photo-1581009137042-c552e485697a?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "hammer-curls",
@@ -97,7 +97,7 @@ const workouts = {
         "Lower with control back to the starting position"
       ],
       variations: ["Alternating", "Cross-body", "Seated", "Cable"],
-      image: "public/lovable-uploads/0a928ef5-2152-421b-bab9-d106282db84d.png"
+      image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=1000"
     }
   ],
   back: [
@@ -114,7 +114,7 @@ const workouts = {
         "Lower with control to a full hang position"
       ],
       variations: ["Wide grip", "Close grip", "Weighted", "Assisted"],
-      image: "public/lovable-uploads/b0a2672f-55e8-451e-9f1c-4876cda48875.png"
+      image: "https://images.unsplash.com/photo-1603287681836-b174ce5074c2?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "barbell-rows",
@@ -129,7 +129,7 @@ const workouts = {
         "Lower the weight in a controlled manner, feeling a stretch in your lats"
       ],
       variations: ["Pendlay row", "Underhand grip", "T-bar row"],
-      image: "public/lovable-uploads/d99bfd30-576d-46b5-9936-0c03177fdafb.png"
+      image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000"
     }
   ],
   shoulders: [
@@ -146,7 +146,7 @@ const workouts = {
         "Keep core tight and avoid excessive back arching"
       ],
       variations: ["Seated", "Dumbbell", "Push press", "Behind the neck (advanced)"],
-      image: "public/lovable-uploads/7b8c21ca-372d-4d1d-b330-68f0b63c64ab.png"
+      image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "lateral-raises",
@@ -161,7 +161,7 @@ const workouts = {
         "Lower the weights slowly back to the starting position"
       ],
       variations: ["Cable", "Single arm", "Leaning", "Partial reps"],
-      image: "public/lovable-uploads/2f838e48-9abe-41be-b896-2968f3c0610e.png"
+      image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=1000"
     }
   ],
   legs: [
@@ -179,7 +179,7 @@ const workouts = {
         "Drive through your heels to return to the starting position"
       ],
       variations: ["High bar", "Low bar", "Front squat", "Box squat"],
-      image: "public/lovable-uploads/3b55b8f4-4c22-4f61-a979-ef79de7f5cde.png"
+      image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "romanian-deadlift",
@@ -194,7 +194,7 @@ const workouts = {
         "Drive your hips forward to return to the starting position"
       ],
       variations: ["Dumbbell", "Single leg", "Trap bar", "Snatch grip"],
-      image: "public/lovable-uploads/837056d0-16bb-4206-8e45-6c6805899645.png"
+      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000"
     }
   ],
   core: [
@@ -211,7 +211,7 @@ const workouts = {
         "Avoid swinging or using momentum"
       ],
       variations: ["Knee raises", "Toes to bar", "Weighted", "Captain's chair"],
-      image: "public/lovable-uploads/74377d4e-304a-4564-b905-8a9384891e9c.png"
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1000"
     },
     {
       id: "plank",
@@ -226,7 +226,7 @@ const workouts = {
         "Breathe normally and avoid sagging hips or raising buttocks"
       ],
       variations: ["Side plank", "Plank with leg lift", "Plank with arm reach", "RKC plank"],
-      image: "public/lovable-uploads/8b6f8c82-fea6-4310-b225-4054f6353f00.png"
+      image: "https://images.unsplash.com/photo-1566241142559-40a9552f4706?auto=format&fit=crop&q=80&w=1000"
     }
   ]
 };

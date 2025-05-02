@@ -48,7 +48,7 @@ const FounderSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-xfit-cyan/20 to-xfit-red/20 rounded-lg blur-xl opacity-70"></div>
               <img 
-                src="public/lovable-uploads/30cffc31-35cb-477f-ba7c-f0ca860ea80f.png" 
+                src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&q=80&w=1000" 
                 alt="Umar Khitab - Founder of X-Fit" 
                 className="relative rounded-lg w-full shadow-lg hover:shadow-neon-cyan transition-all duration-500"
               />

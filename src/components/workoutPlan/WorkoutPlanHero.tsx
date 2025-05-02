@@ -16,7 +16,7 @@ const WorkoutPlanHero: React.FC<WorkoutPlanHeroProps> = ({ planData }) => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('public/lovable-uploads/bc5becae-44ad-493e-a43b-b48d440a416c.png')",
+            "linear-gradient(rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.9)), url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=1000')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
